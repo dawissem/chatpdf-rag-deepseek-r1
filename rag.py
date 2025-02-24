@@ -352,29 +352,30 @@ class ChatDocument:
             Vous êtes un assistant qui doit répondre **exclusivement en français** et qui doit extraire **toutes** les questions et leurs réponses du document fourni.
 
             **IMPORTANT :**
+            - Les questions sont **en gras** dans le document et les propositions de réponses sont en dessous de chaque question.
             - **Ne générez jamais de nouvelles questions ou réponses.** Utilisez uniquement celles présentes dans le document.
             - **Respectez strictement le texte des questions et des réponses.** Ne reformulez rien.
-            - **Si une question a au maximum 5 réponses, affichez uniquement celles disponibles.**
+            - **Si une question a au maximum 5 proposition de réponses, affichez uniquement celles disponibles.**
             - **Affichez uniquement le contenu pertinent sous forme de liste.** Ne fournissez aucune explication, aucun commentaire, et aucune interprétation.
-            - **Évitez d'ajouter des symboles inutiles comme `??` ou `think>`**.
+            - **Évitez d'ajouter des symboles inutiles comme `??` '!!' ou `think>`**.
 
             **Format strict à respecter :**
                 
-                1. **Question 1 :** (Texte exact de la question 1)
+                1. **Question 1 :** (Texte exact de la question 1 en gras)
                     - **Réponse 1.1** : (Texte exact de la réponse 1.1)
                     - **Réponse 1.2** : (Texte exact de la réponse 1.2) (si disponible)
                     - **Réponse 1.3** : (Texte exact de la réponse 1.3) (si disponible)
                     - **Réponse 1.4** : (Texte exact de la réponse 1.4) (si disponible)
                     - **Réponse 1.5** : (Texte exact de la réponse 1.5) (si disponible)
 
-                2. **Question 2 :** (Texte exact de la question 2)
+                2. **Question 2 :** ((Texte exact de la question 2 en gras)
                     - **Réponse 2.1** : (Texte exact de la réponse 2.1)
                     - **Réponse 2.2** : (Texte exact de la réponse 2.2) (si disponible)
                     - **Réponse 2.3** : (Texte exact de la réponse 2.3) (si disponible)
                     - **Réponse 2.4** : (Texte exact de la réponse 2.4) (si disponible)
                     - **Réponse 2.5** : (Texte exact de la réponse 2.5) (si disponible)
                 ...
-                N. **Question N :** (Texte exact de la question N)
+                N. **Question N :** (Texte exact de la question N en gras)
                     - **Réponse N.1** : (Texte exact de la réponse N.1)
                     - **Réponse N.2** : (Texte exact de la réponse N.2) (si disponible)
                     - **Réponse N.3** : (Texte exact de la réponse N.3) (si disponible)
@@ -388,7 +389,7 @@ class ChatDocument:
                 {question}
 
             **Règles supplémentaires :**
-                - **Ne sautez aucune question ni aucune réponse**. Chaque question avec ses réponses doit être affichée.
+                - **Ne sautez aucune question ni aucune proposition de réponse**. Chaque question avec ses réponses doit être affichée.
                 - Assurez-vous que **le format et l'ordre des questions** soient respectés tels qu'ils apparaissent dans le document.
                 - **Si aucune réponse n'est présente pour une question**, **affichez simplement la question sans réponse** (par exemple, "Réponse 1.1 : Non disponible").
 
