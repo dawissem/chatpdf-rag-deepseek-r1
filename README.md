@@ -108,12 +108,12 @@ You can modify the following parameters in `rag.py` to suit your needs:
 
 1. **Models**:
    - Default LLM: `deepseek-r1:latest` (7B parameters)
-   - Default Embedding: `mxbai-embed-large` (1024 dimensions)
+   - Default Embedding: `mxbai-embed-large` (4096 dimensions)
    - Change these in the `ChatPDF` class constructor or when initializing the class
    - Any Ollama-compatible model can be used by updating the `llm_model` parameter
 
 2. **Chunking Parameters**:
-   - `chunk_size=1024` and `chunk_overlap=100`
+   - `chunk_size=4096` and `chunk_overlap=200`
    - Adjust for larger or smaller document splits
 
 3. **Retrieval Settings**:
